@@ -1,0 +1,10 @@
+
+n would correspond to the numeber of rows in the triangle
+
+step1:
+create something that prints the numbe rof rows coressponed to n
+
+step 2:
+figure out a way to print numbers in each row
+row 1 has 1 number, row 2 has 2 numbers, row 3 has 3 numbers
+
