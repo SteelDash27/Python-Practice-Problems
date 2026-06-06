@@ -1,0 +1,8 @@
+
+Create a outer for-loop that re executs that code until the user input number is reached.
+This outer for loop will correspond to which row or set of times tables we are on until 
+we reach the user entered number.
+
+Within the inner for loop we write all the different products of the numbers until
+we reach the user number. This code will terminate the inner for loop
+and then the outer for loop will move onto the next iteration.
