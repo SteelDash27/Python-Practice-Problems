@@ -12,7 +12,7 @@ print(scores)
 
 def maximum(lis: int):
     for i in range():
-        
+         
 
 
 
