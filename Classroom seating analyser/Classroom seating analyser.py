@@ -7,6 +7,9 @@ classroom = [
 
 def top_students(lst,threshold):
     above = [] #list of scors above threshold
-    for i in lst:
-        if(lst[i] > threshold):
-            
+    for row in range(0,len(classroom)):#Takes the number of rows
+        for position in lst[row]:
+            if(position > threshold):
+                above.append(position)
+    print(above)
+        
