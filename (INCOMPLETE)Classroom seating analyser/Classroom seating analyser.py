@@ -21,14 +21,12 @@ def row_averages(lst):
     for row in range(0,len(lst)):
         count = 0
         sum = 0
-        
-        """for num in lst[row]:
-            count += 1
-            sum += num
-            avg = round((float(sum/count)),2)
-            average.append(avg)  
-    print(lst)
-    print(average)"""
+        for num in lst[row]:
+            count +=1
+            sum+= num
+        avg = round(float(sum/count),2)
+        average.append(avg)
+    print(average)
 
 
 """threshold = int(input("Enter in a number that acts as the threshold"))
