@@ -6,7 +6,6 @@ classroom = [
     [91, 84, 77, 89, 93]
 ]
 
-
 def top_students(lst,threshold):
     above = [] #list of scors above threshold
     for row in range(0,len(classroom)):#Takes the number of rows
@@ -14,7 +13,6 @@ def top_students(lst,threshold):
             if(position > threshold):
                 above.append(position)
     print(f"Top scores (above {threshold}): ",above)
-
 
 def row_averages(lst):
     average = []
@@ -26,10 +24,25 @@ def row_averages(lst):
             sum+= num
         avg = round(float(sum/count),2)
         average.append(avg)
-    print(average)
+    print("Row averages: ",average)
+
+def last_two_per_row(lst):
+    lasttwoinrow = []
+    for row in range(0,len(lst)):
+        lasttwoinrow.append(lst[row][-2::][::-1])  
+    print("Last two per row: ",lasttwoinrow)
+
+def row_highest(lst):
+    highestnum = []
+    for row in range(0,len(lst)):
+        highestnum.append(max(lst[row]))
+    print("Highest in each row: ",highestnum)
 
 
-"""threshold = int(input("Enter in a number that acts as the threshold"))
-top_students(classroom , 80)"""
+
+threshold = int(input("Enter in a number that acts as the threshold: "))
+top_students(classroom , threshold)
 row_averages(classroom)
+last_two_per_row(classroom)
+row_highest(classroom)
    
