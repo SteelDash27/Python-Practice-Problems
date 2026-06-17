@@ -27,7 +27,7 @@ def above_average(list):
     print("Average score: ",average)
     for x in range(0,len(list)):
         if(list[x][1] > average):
-            text += str(list[x])
+            text += str(list[x][0]) + " "
     print(text)
         
 
