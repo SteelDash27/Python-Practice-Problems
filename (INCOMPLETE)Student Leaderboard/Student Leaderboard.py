@@ -30,10 +30,9 @@ def above_average(list):
             text += str(list[x][0]) + " "
     print(text)
 
-def reverse_leaderboard(list):
+"""def reverse_leaderboard(list):
     #temporary variable
     low_to_hi = list
-    temp = 0
 
     for i in range(0, len(list)):
         while(i + 1 != len(list)):
@@ -43,6 +42,16 @@ def reverse_leaderboard(list):
                 low_to_hi[i][1] = temp
     print(low_to_hi)
 
-reverse_leaderboard(students)
+reverse_leaderboard(students)"""
 #top_scorers(students)
 #above_average(students)
+
+low = students
+for i in range(0,len(low)):
+    while(i + 1 != len(low)):
+        if(low[i][1] > low[i + 1][1]):
+            temp = low[i+1]
+            low[i+1] = low[i]
+            low[i] = temp
+print(students)
+print(low)
