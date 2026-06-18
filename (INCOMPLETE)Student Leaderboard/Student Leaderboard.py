@@ -48,10 +48,12 @@ reverse_leaderboard(students)"""
 
 low = students
 for i in range(0,len(low)):
-    while(i + 1 != len(low)):
+    if(i + 1 != len(low)):
         if(low[i][1] > low[i + 1][1]):
             temp = low[i+1]
             low[i+1] = low[i]
+            print(low[i+1])
             low[i] = temp
+            print(low[i])
 print(students)
-print(low)
+#print(low)
