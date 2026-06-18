@@ -46,14 +46,16 @@ reverse_leaderboard(students)"""
 #top_scorers(students)
 #above_average(students)
 
-low = students
-for i in range(0,len(low)):
-    if(i + 1 != len(low)):
-        if(low[i][1] > low[i + 1][1]):
-            temp = low[i+1]
-            low[i+1] = low[i]
-            print(low[i+1])
-            low[i] = temp
-            print(low[i])
+low = []
+low.extend(students)
+for i in range(0,len(low) - 1):
+    """if(i + 1 != len(low)):"""
+    while(low[i][1] > low[i + 1][1]):
+        temp = low[i+1]
+        low[i+1] = low[i]
+        low[i] = temp
+    """else:
+        if(low[i] > low[i - 1]== 0):"""
+
 print(students)
-#print(low)
+print(low)
