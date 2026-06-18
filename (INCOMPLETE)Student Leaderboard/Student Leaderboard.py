@@ -7,6 +7,7 @@ students = [
     ["Eve", 65]
 ]
 
+
 def top_scorers(list):
     highestindex = 0
     highest = 0
@@ -46,16 +47,34 @@ reverse_leaderboard(students)"""
 #top_scorers(students)
 #above_average(students)
 
+
+
 low = []
-low.extend(students)
-for i in range(0,len(low) - 1):
-    """if(i + 1 != len(low)):"""
-    while(low[i][1] > low[i + 1][1]):
+for i in range(0,len(students)):
+    low.append(students[i][1])
+
+for x in range(0,len(low)):
+    if(x != len(low)-1):
+        while(low[x] > low[x + 1]):
+            temp = low[x+1]
+            low[x+1] = low[x]
+            low[x] = temp
+    else:
+        if(low[x-1]>low[x]):
+            temp = low[x-1]
+            low[x-1] = low[x]
+            low[x] = temp
+
+
+"""if(i+1 != len(low)):
         temp = low[i+1]
         low[i+1] = low[i]
         low[i] = temp
-    """else:
-        if(low[i] > low[i - 1]== 0):"""
+    else:
+        if(low[i-1]>low[i]):
+            temp = low[i-1]
+            low[i-1] = low[i]
+            low[i] = temp"""
 
 print(students)
 print(low)
